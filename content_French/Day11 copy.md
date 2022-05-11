@@ -1,50 +1,50 @@
 # st.multiselect
 
-`st.multiselect` displays a multiselect widget.
+`st.multiselect` affiche un widget multiselect.
 
-## Demo app
+## Application de démonstration
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.multiselect/)
+[![Application Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.multiselect/)
 
-## Code
-Here's how to use `st.multiselect`:
+##Code
+Voici comment utiliser `st.multiselect` :
 ```python
-import streamlit as st
+importer streamlit en tant que st
 
 st.header('st.multiselect')
 
 options = st.multiselect(
-     'What are your favorite colors',
-     ['Green', 'Yellow', 'Red', 'Blue'],
-     ['Yellow', 'Red'])
+     'Quelles sont tes couleurs préférées',
+     ['Vert', 'Jaune', 'Rouge', 'Bleu'],
+     ['Jaune', 'Rouge'])
 
-st.write('You selected:', options)
+st.write('Vous avez sélectionné :', options)
 ```
 
-## Line-by-line explanation
-The very first thing to do when creating a Streamlit app is to start by importing the `streamlit` library as `st` like so:
+## Explication ligne par ligne
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` comme ceci :
 ```python
-import streamlit as st
+importer streamlit en tant que st
 ```
 
-This is followed by creating a header text for the app:
+Ceci est suivi par la création d'un texte d'en-tête pour l'application :
 ```python
 st.header('st.multiselect')
 ```
 
-Next, we're going to use the `st.multiselect` widget to accept input where users will be able to select one or more colors of there choice.
+Ensuite, nous allons utiliser le widget `st.multiselect` pour accepter les entrées où les utilisateurs pourront sélectionner une ou plusieurs couleurs de leur choix.
 
 ```python
 options = st.multiselect(
-     'What are your favorite colors',
-     ['Green', 'Yellow', 'Red', 'Blue'],
-     ['Yellow', 'Red'])
+     'Quelles sont tes couleurs préférées',
+     ['Vert', 'Jaune', 'Rouge', 'Bleu'],
+     ['Jaune', 'Rouge'])
 ```
 
-Finally, we'll write out the selected colors:
+Enfin, nous écrirons les couleurs sélectionnées :
 ```python
-st.write('You selected:', options)
+st.write('Vous avez sélectionné :', options)
 ```
 
-## Further reading
+## Lectures complémentaires
 - [`st.multiselect`](https://docs.streamlit.io/library/api-reference/widgets/st.multiselect)

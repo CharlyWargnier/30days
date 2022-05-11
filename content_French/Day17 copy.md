@@ -1,41 +1,41 @@
 # st.secrets
 
-`st.secrets` allows you to store confidential information such as API keys, database passwords or other credentials.
+`st.secrets` vous permet de stocker des informations confidentielles telles que des clés API, des mots de passe de base de données ou d'autres informations d'identification.
 
-## Demo app
+## Application de démonstration
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.secrets/)
+[![Application Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.secrets/)
 
-## Code
-Here's how to use `st.secrets`:
+##Code
+Voici comment utiliser `st.secrets` :
 ```python
-import streamlit as st
+importer streamlit en tant que st
 
 st.title('st.secrets')
 
 st.write(st.secrets['message'])
 ```
 
-## Line-by-line explanation
-The very first thing to do when creating a Streamlit app is to start by importing the `streamlit` library as `st` like so:
+## Explication ligne par ligne
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` comme ceci :
 ```python
-import streamlit as st
+importer streamlit en tant que st
 ```
 
-This is followed by creating a title text for the app:
+Ceci est suivi par la création d'un texte de titre pour l'application :
 ```python
 st.title('st.secrets')
 ```
 
-Finally, we'll be displaying the stored secrets:
+Enfin, nous afficherons les secrets stockés :
 ```python
 st.write(st.secrets['message'])
 ```
 
-It should be noted that, secrets can be stored in Streamlit Cloud as shown in the screenshots shown below.
+Il convient de noter que les secrets peuvent être stockés dans Streamlit Cloud, comme indiqué dans les captures d'écran ci-dessous.
 
-If working locally, they can be stored in `.streamlit/secrets.toml`, but make sure to avoid uploading this to a GitHub repo when deploying the app.
+Si vous travaillez localement, ils peuvent être stockés dans `.streamlit/secrets.toml`, mais assurez-vous d'éviter de les télécharger sur un référentiel GitHub lors du déploiement de l'application.
 
-## Further reading
-- [Add secrets to your Streamlit apps](https://blog.streamlit.io/secrets-in-sharing-apps/)
-- [Secrets management](https://docs.streamlit.io/streamlit-cloud/get-started/deploy-an-app/connect-to-data-sources/secrets-management)
+## Lectures complémentaires
+- [Ajouter des secrets à vos applications Streamlit](https://blog.streamlit.io/secrets-in-sharing-apps/)
+- [Gestion des secrets](https://docs.streamlit.io/streamlit-cloud/get-started/deploy-an-app/connect-to-data-sources/secrets-management)

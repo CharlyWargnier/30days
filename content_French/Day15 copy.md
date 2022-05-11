@@ -1,47 +1,47 @@
 # st.latex
 
-`st.latex` display mathematical expressions formatted as LaTeX.
+`st.latex` affiche des expressions mathématiques au format LaTeX.
 
-## What we're building?
+## Qu'est-ce que nous construisons ?
 
-A simple app that displays a mathematical equation using LaTeX syntax via the `st.latex` command.
+Une application simple qui affiche une équation mathématique utilisant la syntaxe LaTeX via la commande `st.latex`.
 
-## Demo app
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.latex/)
+## Application de démonstration
+[![Application Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.latex/)
 
-## Code
-Here's how to use `st.latex`:
+##Code
+Voici comment utiliser `st.latex` :
 ```python
-import streamlit as st
+importer streamlit en tant que st
 
 st.header('st.latex')
 
 st.latex(r'''
-     a + ar + a r^2 + a r^3 + \cdots + a r^{n-1} =
+     une + ar + une r^2 + une r^3 + \cdots + une r^{n-1} =
      \sum_{k=0}^{n-1} ar^k =
      a \left(\frac{1-r^{n}}{1-r}\right)
      ''')
 ```
 
-## Line-by-line explanation
-The very first thing to do when creating a Streamlit app is to start by importing the `streamlit` library as `st` like so:
+## Explication ligne par ligne
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` comme ceci :
 ```python
-import streamlit as st
+importer streamlit en tant que st
 ```
 
-This is followed by creating a header text for the app:
+Ceci est suivi par la création d'un texte d'en-tête pour l'application :
 ```python
 st.header('st.latex')
 ```
 
-Next, we're displaying the mathematical equation via `st.latex`:
+Ensuite, nous affichons l'équation mathématique via `st.latex` :
 ```python
 st.latex(r'''
-     a + ar + a r^2 + a r^3 + \cdots + a r^{n-1} =
+     une + ar + une r^2 + une r^3 + \cdots + une r^{n-1} =
      \sum_{k=0}^{n-1} ar^k =
      a \left(\frac{1-r^{n}}{1-r}\right)
      ''')
 ```
 
-## References
-- Read more about [`st.latex`](https://docs.streamlit.io/library/api-reference/text/st.latex) in the Streamlit API Documentation.
+## Références
+- En savoir plus sur [`st.latex`](https://docs.streamlit.io/library/api-reference/text/st.latex) dans la documentation de l'API Streamlit.

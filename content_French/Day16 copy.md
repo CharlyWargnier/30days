@@ -1,86 +1,86 @@
-# Customizing the theme of Streamlit apps
+# Personnalisation du thème des applications Streamlit
 
-We can customize the theme by adjusting parameters in `config.toml`, which is a configuration file stored in the same folder as the app in the `.streamlit` folder.
+Nous pouvons personnaliser le thème en ajustant les paramètres dans `config.toml`, qui est un fichier de configuration stocké dans le même dossier que l'application dans le dossier `.streamlit`.
 
-## What we're building?
+## Qu'est-ce que nous construisons ?
 
-A simple app that shows the result of our theme customization. This is made possible by customizing the HTML HEX code inside the [`.streamlit/config.toml`](https://github.com/dataprofessor/streamlit-custom-theme/blob/master/.streamlit/config.toml) file.
+Une application simple qui montre le résultat de notre personnalisation de thème. Ceci est rendu possible en personnalisant le code HTML HEX à l'intérieur du [`.streamlit/config.toml`](https://github.com/dataprofessor/streamlit-custom-theme/blob/master/.streamlit/config.toml) dossier.
 
-## Demo app
+## Application de démonstration
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/streamlit-custom-theme/)
+[![Application Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/streamlit-custom-theme/)
 
-## Code
-Here's the code to the [`streamlit_app.py`](https://github.com/dataprofessor/streamlit-custom-theme/blob/master/streamlit_app.py) file:
+##Code
+Voici le code du fichier [`streamlit_app.py`](https://github.com/dataprofessor/streamlit-custom-theme/blob/master/streamlit_app.py) :
 ```python
-import streamlit as st
+importer streamlit en tant que st
 
-st.title('Customizing the theme of Streamlit apps')
+st.title('Personnalisation du thème des applications Streamlit')
 
-st.write('Contents of the `.streamlit/config.toml` file of this app')
+st.write('Contenu du fichier `.streamlit/config.toml` de cette application')
 
 st.code("""
-[theme]
-primaryColor="#F39C12"
+[thème]
+CouleurPrimaire="#F39C12"
 backgroundColor="#2E86C1"
-secondaryBackgroundColor="#AED6F1"
+SecondaryBackgroundColor="#AED6F1"
 textColor="#FFFFFF"
 font="monospace"
 """)
 
-number = st.sidebar.slider('Select a number:', 0, 10, 5)
-st.write('Selected number from slider widget is:', number)
+number = st.sidebar.slider('Sélectionnez un nombre :', 0, 10, 5)
+st.write('Le nombre sélectionné dans le widget slider est :', nombre)
 ```
 
-Here's the code to the [`.streamlit/config.toml`](https://github.com/dataprofessor/streamlit-custom-theme/blob/master/.streamlit/config.toml) file:
+Voici le code du fichier [`.streamlit/config.toml`](https://github.com/dataprofessor/streamlit-custom-theme/blob/master/.streamlit/config.toml) :
 ```python
-[theme]
-primaryColor="#F39C12"
+[thème]
+CouleurPrimaire="#F39C12"
 backgroundColor="#2E86C1"
-secondaryBackgroundColor="#AED6F1"
+SecondaryBackgroundColor="#AED6F1"
 textColor="#FFFFFF"
 font="monospace"
 ```
 
-## Line-by-line explanation
-The very first thing to do when creating a Streamlit app is to start by importing the `streamlit` library as `st` like so:
+## Explication ligne par ligne
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` comme ceci :
 ```python
-import streamlit as st
+importer streamlit en tant que st
 ```
 
-This is followed by creating a title text for the app:
+Ceci est suivi par la création d'un texte de titre pour l'application :
 ```python
-st.title('Theming with config.toml')
+st.title('Thématisation avec config.toml')
 ```
 
-Next, we're going to show the contents of the `.streamlit/config.toml` file which we'll first display a note of this via `st.write` followed by the actual code via `st.code`:
+Ensuite, nous allons montrer le contenu du fichier `.streamlit/config.toml` dont nous allons d'abord afficher une note via `st.write` suivi du code réel via `st.code` :
 ```python
-st.write('Contents of the ./streamlit/config.toml file of this app')
+st.write('Contenu du fichier ./streamlit/config.toml de cette application')
 
 st.code("""
-[theme]
-primaryColor="#F39C12"
+[thème]
+CouleurPrimaire="#F39C12"
 backgroundColor="#2E86C1"
-secondaryBackgroundColor="#AED6F1"
+SecondaryBackgroundColor="#AED6F1"
 textColor="#FFFFFF"
 font="monospace"
 """)
 ```
 
-Finally, we're creating a slider widget in the sidebar followed by displaying the selected number:
+Enfin, nous créons un widget de curseur dans la barre latérale suivi de l'affichage du nombre sélectionné :
 ```python
-number = st.sidebar.slider('Select a number:', 0, 10, 5)
-st.write('Selected number from slider widget is:', number)
+number = st.sidebar.slider('Sélectionnez un nombre :', 0, 10, 5)
+st.write('Le nombre sélectionné dans le widget slider est :', nombre)
 ```
 
-Let's now take a look at the custom colors that we've used in this app, which is specified in the `.streamlit/config.toml` file:
-- `primaryColor="#F39C12"` - This sets the primary color to orange. Notice the orange colors in the slider widget.
-- `backgroundColor="#2E86C1"` - This sets the background color to blue. Notice the main panel has a blue background color.
-- `secondaryBackgroundColor="#AED6F1"` - This sets the secondary background color to dark gray. Notice the gray background color of the sidebar and the background color of the code box in the main panel.
-- `textColor="#FFFFFF"` - The text color is set to white.
-- `font="monospace"` - This sets the font to monospace.
+Examinons maintenant les couleurs personnalisées que nous avons utilisées dans cette application, qui sont spécifiées dans le fichier `.streamlit/config.toml` :
+- `primaryColor="#F39C12"` - Cela définit la couleur primaire sur orange. Remarquez les couleurs orange dans le widget du curseur.
+- `backgroundColor="#2E86C1"` - Cela définit la couleur d'arrière-plan sur le bleu. Notez que le panneau principal a une couleur de fond bleue.
+- `secondaryBackgroundColor="#AED6F1"` - Cela définit la couleur d'arrière-plan secondaire sur gris foncé. Remarquez la couleur d'arrière-plan grise de la barre latérale et la couleur d'arrière-plan de la zone de code dans le panneau principal.
+- `textColor="#FFFFFF"` - La couleur du texte est définie sur blanc.
+- `font="monospace"` - Cela définit la police sur monospace.
 
 
-## Further reading
+## Lectures complémentaires
 - [Theming](https://docs.streamlit.io/library/advanced-features/theming)
-- [HTML Color Codes](https://htmlcolorcodes.com/) is a great tool for selecting colors of interest.
+- [HTML Color Codes](https://htmlcolorcodes.com/) est un excellent outil pour sélectionner les couleurs qui vous intéressent.

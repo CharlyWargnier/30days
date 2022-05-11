@@ -1,59 +1,59 @@
-# st.progress
+# st.progrès
 
-`st.progress` displays a progress bar that updates graphically as the iteration progresses.
+`st.progress` affiche une barre de progression qui se met à jour graphiquement au fur et à mesure que l'itération progresse.
 
-## Demo app
+## Application de démonstration
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.progress/)
+[![Application Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.progress/)
 
-## Code
-Here's how to use `st.progress`:
+##Code
+Voici comment utiliser `st.progress` :
 ```python
-import streamlit as st
-import time
+importer streamlit en tant que st
+temps d'importation
 
 st.title('st.progress')
 
 with st.expander('About this app'):
-     st.write('You can now display the progress of your calculations in a Streamlit app with the `st.progress` command.')
+     st.write('Vous pouvez maintenant afficher la progression de vos calculs dans une application Streamlit avec la commande `st.progress`.')
 
-my_bar = st.progress(0)
+ma_bar = st.progress(0)
 
-for percent_complete in range(100):
-     time.sleep(0.05)
+pour percent_complete dans la plage (100):
+     temps.sleep(0.05)
      my_bar.progress(percent_complete + 1)
 
-st.balloons()
+st.ballons()
 ```
 
-## Line-by-line explanation
-The very first thing to do when creating a Streamlit app is to start by importing the `streamlit` library as `st` along with the `time` library like so:
+## Explication ligne par ligne
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` avec la bibliothèque `time` comme ceci :
 ```python
-import streamlit as st
-import time
+importer streamlit en tant que st
+temps d'importation
 ```
 
-Next, we create a title text for the app:
+Ensuite, nous créons un texte de titre pour l'application :
 ```python
 st.title('st.progress')
 ```
 
-An **About box** is created using `st.expander` and description is displayed via `st.write`:
+Une **boîte À propos** est créée à l'aide de `st.expander` et la description est affichée via `st.write` :
 ```python
 with st.expander('About this app'):
-     st.write('You can now display the progress of your calculations in a Streamlit app with the `st.progress` command.')
+     st.write('Vous pouvez maintenant afficher la progression de vos calculs dans une application Streamlit avec la commande `st.progress`.')
 ```
 
-Finally, we define a progress bar and instantiate it with a starting value of `0`. Then, a `for` loop will iterate from `0` until `100` is reached. In each iteration, we use `time.sleep(0.05)` to allow the app to wait for `0.05` before adding a value of `1` to the `my_bar` progress bar and in doing so the graphical display of the bar increases with each iteration.
+Enfin, nous définissons une barre de progression et l'instancions avec une valeur de départ de "0". Ensuite, une boucle `for` itérera de `0` jusqu'à ce que `100` soit atteint. À chaque itération, nous utilisons `time.sleep(0.05)` pour permettre à l'application d'attendre `0.05` avant d'ajouter une valeur de `1` à la barre de progression `my_bar` et, ce faisant, l'affichage graphique de la barre augmente à chaque itération.
 ```python
-my_bar = st.progress(0)
+ma_bar = st.progress(0)
 
-for percent_complete in range(100):
-     time.sleep(0.05)
+pour percent_complete dans la plage (100):
+     temps.sleep(0.05)
      my_bar.progress(percent_complete + 1)
 
-st.balloons()
+st.ballons()
 ```
 
-## Further reading
+## Lectures complémentaires
 - [`st.progress`](https://docs.streamlit.io/library/api-reference/status/st.progress)

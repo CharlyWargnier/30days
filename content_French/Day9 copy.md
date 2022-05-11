@@ -1,65 +1,65 @@
 # st.line_chart
 
-`st.line_chart` displays a line chart.
+`st.line_chart` affiche un graphique linéaire.
 
-This is syntax-sugar around `st.altair_chart`. The main difference is this command uses the data's own column and indices to figure out the chart's spec. As a result this is easier to use for many "just plot this" scenarios, while being less customizable.
+Il s'agit de sucre syntaxique autour de `st.altair_chart`. La principale différence est que cette commande utilise la colonne et les indices des données pour déterminer les spécifications du graphique. En conséquence, cela est plus facile à utiliser pour de nombreux scénarios "juste tracer ceci", tout en étant moins personnalisable.
 
-If `st.line_chart` does not guess the data specification correctly, try specifying your desired chart using st.altair_chart.
+Si `st.line_chart` ne devine pas correctement la spécification des données, essayez de spécifier le graphique souhaité à l'aide de st.altair_chart.
 
-## What we're building?
+## Qu'est-ce que nous construisons ?
 
-A simple app for displaying a line chart.
+Une application simple pour afficher un graphique linéaire.
 
-Flow of the app:
-1. Create a `Pandas` DataFrame from numbers randomly generated via `NumPy`.
-2. Create and display the line chart via `st.line_chart()` command.
+Déroulement de l'application :
+1. Créez un DataFrame `Pandas` à partir de nombres générés aléatoirement via `NumPy`.
+2. Créez et affichez le graphique linéaire via la commande `st.line_chart()`.
 
-## Demo app
+## Application de démonstration
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.line_chart/)
+[![Application Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.line_chart/)
 
-## Code
-Here's how to use [`st.line_chart`](https://docs.streamlit.io/library/api-reference/charts/st.line_chart):
+##Code
+Voici comment utiliser [`st.line_chart`](https://docs.streamlit.io/library/api-reference/charts/st.line_chart) :
 ```python
-import streamlit as st
-import pandas as pd
-import numpy as np
+importer streamlit en tant que st
+importer des pandas en tant que pd
+importer numpy en tant que np
 
-st.header('Line chart')
+st.header('Graphique linéaire')
 
 chart_data = pd.DataFrame(
      np.random.randn(20, 3),
-     columns=['a', 'b', 'c'])
+     colonnes=['a', 'b', 'c'])
 
 st.line_chart(chart_data)
 
 ```
 
-## Line-by-line explanation
-The very first thing to do when creating a Streamlit app is to start by importing the `streamlit` library as `st` as well as other libraries like so:
+## Explication ligne par ligne
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` ainsi que d'autres bibliothèques comme celle-ci :
 ```python
-import streamlit as st
-import pandas as pd
-import numpy as np
+importer streamlit en tant que st
+importer des pandas en tant que pd
+importer numpy en tant que np
 ```
 
-Next, we create a header text for the app:
+Ensuite, nous créons un texte d'en-tête pour l'application :
 ```python
-st.header('Line chart')
+st.header('Graphique linéaire')
 ```
 
-Then, we create a DataFrame of randomly generated numbers that contains 3 columns.
+Ensuite, nous créons un DataFrame de nombres générés aléatoirement qui contient 3 colonnes.
 ```python
 chart_data = pd.DataFrame(
      np.random.randn(20, 3),
-     columns=['a', 'b', 'c'])
+     colonnes=['a', 'b', 'c'])
 ```
 
-Finally, a line chart is created by using `st.line_chart()` with the DataFrame stored in the `chart_data` variable as  the input data:
+Enfin, un graphique linéaire est créé en utilisant `st.line_chart()` avec le DataFrame stocké dans la variable `chart_data` comme données d'entrée :
 ```python
 st.line_chart(chart_data)
 ```
 
-## Further reading
-Read more about the following related Streamlit command from which [`st.line_chart`](https://docs.streamlit.io/library/api-reference/charts/st.line_chart) is based on:
+## Lectures complémentaires
+En savoir plus sur la commande Streamlit connexe suivante à partir de laquelle [`st.line_chart`](https://docs.streamlit.io/library/api-reference/charts/st.line_chart) est basé sur :
 - [`st.altair_chart`](https://docs.streamlit.io/library/api-reference/charts/st.altair_chart)

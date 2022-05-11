@@ -1,78 +1,78 @@
 # st.session_state
 
-We define access to a Streamlit app in a browser tab as a session. For each browser tab that connects to the Streamlit server, a new session is created. Streamlit reruns your script from top to bottom every time you interact with your app. Each reruns takes place in a blank slate: no variables are shared between runs.
+Nous définissons l'accès à une application Streamlit dans un onglet de navigateur comme une session. Pour chaque onglet du navigateur qui se connecte au serveur Streamlit, une nouvelle session est créée. Streamlit réexécute votre script de haut en bas chaque fois que vous interagissez avec votre application. Chaque rediffusion a lieu dans une ardoise vierge : aucune variable n'est partagée entre les exécutions.
 
-Session State is a way to share variables between reruns, for each user session. In addition to the ability to store and persist state, Streamlit also exposes the ability to manipulate state using Callbacks.
+L'état de session est un moyen de partager des variables entre les réexécutions, pour chaque session utilisateur. En plus de la possibilité de stocker et de conserver l'état, Streamlit expose également la possibilité de manipuler l'état à l'aide de rappels.
 
-In this tutorial, we will illustrate the usage of Session State and Callbacks as we build a weight conversion app.
+Dans ce didacticiel, nous allons illustrer l'utilisation de l'état de session et des rappels lors de la création d'une application de conversion de poids.
 
-`st.session_state` allows the implementation of session state in a Streamlit app.
+`st.session_state` permet l'implémentation de l'état de session dans une application Streamlit.
 
-## Demo app
+## Application de démonstration
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.session_state/)
+[![Application Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.session_state/)
 
-## Code
-Here's how to use `st.session_state`:
+##Code
+Voici comment utiliser `st.session_state` :
 ```python
-import streamlit as st
+importer streamlit en tant que st
 
 st.title('st.session_state')
 
-def lbs_to_kg():
+def lbs_to_kg() :
   st.session_state.kg = st.session_state.lbs/2.2046
-def kg_to_lbs():
+def kg_to_lbs() :
   st.session_state.lbs = st.session_state.kg*2.2046
 
-st.header('Input')
-col1, spacer, col2 = st.columns([2,1,2])
-with col1:
-  pounds = st.number_input("Pounds:", key = "lbs", on_change = lbs_to_kg)
-with col2:
-  kilogram = st.number_input("Kilograms:", key = "kg", on_change = kg_to_lbs)
+st.header('Entrée')
+col1, espaceur, col2 = st.columns([2,1,2])
+avec col1 :
+  livres = st.number_input("Livres :", key = "lbs", on_change = lbs_to_kg)
+avec col2 :
+  kilogramme = st.number_input("Kilogrammes :", key = "kg", on_change = kg_to_lbs)
 
-st.header('Output')
-st.write("st.session_state object:", st.session_state)
+st.header('Sortie')
+st.write("objet st.session_state : ", st.session_state)
 ```
 
-## Line-by-line explanation
-The very first thing to do when creating a Streamlit app is to start by importing the `streamlit` library as `st` like so:
+## Explication ligne par ligne
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` comme ceci :
 ```python
-import streamlit as st
+importer streamlit en tant que st
 ```
 
-Firstly, we'll start by creating the title of the app:
+Tout d'abord, nous allons commencer par créer le titre de l'application :
 ```python
 st.title('st.session_state')
 ```
 
-Next, we define custom functions for the weight conversion from lbs to kg and vice versa:
+Ensuite, nous définissons des fonctions personnalisées pour la conversion du poids de lbs en kg et vice versa :
 ```python
-def lbs_to_kg():
+def lbs_to_kg() :
   st.session_state.kg = st.session_state.lbs/2.2046
-def kg_to_lbs():
+def kg_to_lbs() :
   st.session_state.lbs = st.session_state.kg*2.2046
 ```
 
-Here, we use `st.number_input` to accept numerical inputs of the weight values:
+Ici, nous utilisons `st.number_input` pour accepter les entrées numériques des valeurs de poids :
 ```python
-st.header('Input')
-col1, spacer, col2 = st.columns([2,1,2])
-with col1:
-  pounds = st.number_input("Pounds:", key = "lbs", on_change = lbs_to_kg)
-with col2:
-  kilogram = st.number_input("Kilograms:", key = "kg", on_change = kg_to_lbs)
+st.header('Entrée')
+col1, espaceur, col2 = st.columns([2,1,2])
+avec col1 :
+  livres = st.number_input("Livres :", key = "lbs", on_change = lbs_to_kg)
+avec col2 :
+  kilogramme = st.number_input("Kilogrammes :", key = "kg", on_change = kg_to_lbs)
 ```
-The above 2 custom functions will be called upon as soon as a numerical value is entered into the number box created using the `st.number_input` command. Notice how the `on_change` option specifies the 2 custom functions `lbs_to_kg` and `kg_to_lbs`). 
+Les 2 fonctions personnalisées ci-dessus seront appelées dès qu'une valeur numérique sera entrée dans la zone numérique créée à l'aide de la commande `st.number_input`. Remarquez comment l'option `on_change` spécifie les 2 fonctions personnalisées `lbs_to_kg` et `kg_to_lbs`).
 
-In a nutshell, upon entering a number into the `st.number_input` box the number is converted by these custom functions.
+En un mot, lors de la saisie d'un nombre dans la case `st.number_input`, le nombre est converti par ces fonctions personnalisées.
 
-Finally, the weight values in `kg` and `lbs` units as stored in the session state as `st.session_state.kg` and `st.session_state.lbs` will be printed out via `st.write`:
+Enfin, les valeurs de poids en unités `kg` et `lbs` telles que stockées dans l'état de session sous `st.session_state.kg` et `st.session_state.lbs` seront imprimées via `st.write` :
 ```python
-st.header('Output')
-st.write("st.session_state object:", st.session_state)
+st.header('Sortie')
+st.write("objet st.session_state : ", st.session_state)
 ```
 
-## Further reading
-- [Session State](https://docs.streamlit.io/library/api-reference/session-state)
-- [Add statefulness to apps](https://docs.streamlit.io/library/advanced-features/session-state)
+## Lectures complémentaires
+- [État de la session] (https://docs.streamlit.io/library/api-reference/session-state)
+- [Ajouter un état aux applications] (https://docs.streamlit.io/library/advanced-features/session-state)

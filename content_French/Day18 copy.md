@@ -1,64 +1,64 @@
 # st.file_uploader
 
-`st.file_uploader` displays a file uploader widget [[1](https://docs.streamlit.io/library/api-reference/widgets/st.file_uploader)].
+`st.file_uploader` affiche un widget de téléchargement de fichiers [[1](https://docs.streamlit.io/library/api-reference/widgets/st.file_uploader)].
 
-By default, uploaded files are limited to 200MB. You can configure this using the server.maxUploadSize config option. For more info on how to set config options, see [[2](https://docs.streamlit.io/library/advanced-features/configuration#set-configuration-options)].
+Par défaut, les fichiers téléchargés sont limités à 200 Mo. Vous pouvez le configurer à l'aide de l'option de configuration server.maxUploadSize. Pour plus d'informations sur la définition des options de configuration, consultez [[2](https://docs.streamlit.io/library/advanced-features/configuration#set-configuration-options)].
 
-## Demo app
+## Application de démonstration
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.file_uploader/)
+[![Application Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.file_uploader/)
 
-## Code
-Here's how to use `st.file_uploader`:
+##Code
+Voici comment utiliser `st.file_uploader` :
 ```python
-import streamlit as st
-import pandas as pd
+importer streamlit en tant que st
+importer des pandas en tant que pd
 
 st.title('st.file_uploader')
 
-st.subheader('Input CSV')
-uploaded_file = st.file_uploader("Choose a file")
+st.subheader('Entrée CSV')
+upload_file = st.file_uploader("Choisir un fichier")
 
-if uploaded_file is not None:
-  df = pd.read_csv(uploaded_file)
+si uploaded_file n'est pas None :
+  df = pd.read_csv(téléchargé_fichier)
   st.subheader('DataFrame')
-  st.write(df)
-  st.subheader('Descriptive Statistics')
+  st.écrire (df)
+  st.subheader('Statistiques descriptives')
   st.write(df.describe())
-else:
-  st.info('☝️ Upload a CSV file')
+autre:
+  st.info('☝️ Téléchargez un fichier CSV')
 ```
 
-## Line-by-line explanation
-The very first thing to do when creating a Streamlit app is to start by importing the `streamlit` library as `st` and other prerequisite library like so:
+## Explication ligne par lignea
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` et d'autres bibliothèques prérequises comme suit :
 ```python
-import streamlit as st
-import pandas as pd
+importer streamlit en tant que st
+importer des pandas en tant que pd
 ```
 
-This is followed by creating a title text for the app:
+Ceci est suivi par la création d'un texte de titre pour l'application :
 ```python
 st.title('st.file_uploader')
 ```
 
-Next, we'll use `st.file_uploader` to display a file uploader widget for accepting user input file:
+Ensuite, nous utiliserons `st.file_uploader` pour afficher un widget de téléchargement de fichiers pour accepter le fichier d'entrée utilisateur :
 ```python
-st.subheader('Input CSV')
-uploaded_file = st.file_uploader("Choose a file")
+st.subheader('Entrée CSV')
+upload_file = st.file_uploader("Choisir un fichier")
 ```
 
-Finally, we define conditional statements for initially displaying a welcome message inviting users to upload their file (as implemented in the `else` condition). Upon file upload, the `if` statements are activated and the CSV file is read by the `pandas` library and displayed via the `st.write` command.
+Enfin, nous définissons des instructions conditionnelles pour afficher initialement un message de bienvenue invitant les utilisateurs à télécharger leur fichier (comme implémenté dans la condition `else`). Lors du téléchargement du fichier, les instructions "if" sont activées et le fichier CSV est lu par la bibliothèque "pandas" et affiché via la commande "st.write".
 ```python
-if uploaded_file is not None:
-  df = pd.read_csv(uploaded_file)
+si uploaded_file n'est pas None :
+  df = pd.read_csv(téléchargé_fichier)
   st.subheader('DataFrame')
-  st.write(df)
-  st.subheader('Descriptive Statistics')
+  st.écrire (df)
+  st.subheader('Statistiques descriptives')
   st.write(df.describe())
-else:
-  st.info('☝️ Upload a CSV file')
+autre:
+  st.info('☝️ Téléchargez un fichier CSV')
 ```
 
-## Further reading
+## Lectures complémentaires
 1. [`st.file_uploader`](https://docs.streamlit.io/library/api-reference/widgets/st.file_uploader)
-2. [Set configuration options](https://docs.streamlit.io/library/advanced-features/configuration#set-configuration-options)
+2. [Définir les options de configuration](https://docs.streamlit.io/library/advanced-features/configuration#set-configuration-options)

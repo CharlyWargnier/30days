@@ -1,32 +1,31 @@
-# How to make a zero-shot learning text classifier using Hugging Face and Streamlit
+# Comment créer un classificateur de texte d'apprentissage zéro coup en utilisant Hugging Face et Streamlit
 
-In today's challenge, [Charly Wargnier](https://twitter.com/DataChaz) will walk us through the process of developing a zero-shot learning text classifier using Hugging Face and Streamlit.
+Dans le défi d'aujourd'hui, [Charly Wargnier](https://twitter.com/DataChaz) nous guidera tout au long du processus de développement d'un classificateur de texte d'apprentissage zéro coup à l'aide de Hugging Face et Streamlit.
 
 ## Introduction
 
-Hey Streamliters!
+Hé Streamliters !
 
-Today I'm excited to have the opportunity to contribute to the 30DaysofStreamlit challenge via this hands-on tutorial! 🎈
+Aujourd'hui, je suis ravi d'avoir l'opportunité de contribuer au défi 30DaysofStreamlit via ce tutoriel pratique ! 🎈
 
-## What are we building?
+## Que construisons-nous ?
 
-We will create a zero-shot learning text classifier using Hugging Face's API inference and Distilbart!
+Nous allons créer un classificateur de texte d'apprentissage zéro coup en utilisant l'inférence API de Hugging Face et Distilbart !
 
-You will have the mighty power to classify keyphrases on-the-fly, fast, and without pre ML training!
+Vous aurez le pouvoir puissant de classer les phrases clés à la volée, rapidement et sans formation préalable au ML !
 
-Create classifying labels, paste your keyphrases, and you're off!
+Créez des étiquettes de classement, collez vos phrases clés et c'est parti !
 
-You can set these labels anything, e.g.:
+Vous pouvez définir ces étiquettes n'importe quoi, par exemple :
 
-- Positive, Negative and Neutral for sentiment analysis
-- Angry, Happy, Emotional for emotion analysis
-- Navigational, Transactional, Informational for intent classification purposes
-- Your product range  (bags, shoes, boots etc.)
+- Positif, négatif et neutre pour l'analyse des sentiments
+- En colère, heureux, émotionnel pour l'analyse des émotions
+- Navigation, transactionnel, informationnel à des fins de classification d'intention
+- Votre gamme de produits (sacs, chaussures, bottes etc.)
 
-You decide! 
+Tu décides!
 
-Excited? Let's dive in! 
+Excité? Plongeons-nous !
 
-## Read the full blog
-👉 [Read the full blog](https://www.charlywargnier.com/post/how-to-create-a-zero-shot-learning-text-classifier-using-hugging-face-and-streamlit)
-
+## Lire le blog complet
+👉 [Lire le blog complet](https://www.charlywargnier.com/post/how-to-create-a-zero-shot-learning-text-classifier-using-hugging-face-and-streamlit)

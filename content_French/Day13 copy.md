@@ -1,12 +1,12 @@
-# Spin up a cloud development environment
+# Faites tourner un environnement de développement cloud
 
 ### GitPod
-To spin up a development environment on the cloud, we can use [GitPod](https://www.gitpod.io/) and this can be done simply by clicking on the following link:
-- Try it 👉 https://gitpod.io/#/https://github.com/dataprofessor/streamlit101/
+Pour faire tourner un environnement de développement sur le cloud, nous pouvons utiliser [GitPod](https://www.gitpod.io/) et cela peut être fait simplement en cliquant sur le lien suivant :
+- Essayez-le 👉 https://gitpod.io/#/https://github.com/dataprofessor/streamlit101/
 
-As you can see from the URL above, a GitHub repo URL is appended after `https://gitpod.io/#/` which essentially allow GitPod to spin up a development environment using instructions contained within the GitHub repo URL (namely in the `requirements.txt` file that specifically lists the Python libraries to install).
+Comme vous pouvez le voir sur l'URL ci-dessus, une URL de dépôt GitHub est ajoutée après `https://gitpod.io/#/`, ce qui permet essentiellement à GitPod de lancer un environnement de développement en utilisant les instructions contenues dans l'URL de dépôt GitHub (à savoir dans le `requirements.txt` qui répertorie spécifiquement les bibliothèques Python à installer).
 
-> Note: There are other similar cloud development environment such as:
+> Remarque : Il existe d'autres environnements de développement cloud similaires, tels que :
 > - [GitHub Codespaces](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/setting-up-your-python-project-for-codespaces)
 > - [Replit](https://replit.com/)
 > - [Cloud9](https://aws.amazon.com/cloud9/)
