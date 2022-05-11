@@ -13,7 +13,7 @@ Dans ce tutoriel, nous allons utiliser les commandes suivantes pour mettre en pa
 ##Code
 Voici comment personnaliser la mise en page de votre application Streamlit :
 ```python
-importer streamlit en tant que st
+import streamlit as st
 
 st.set_page_config(layout="wide")
 
@@ -52,9 +52,9 @@ avec col3 :
 ```
 
 ## Explication ligne par ligne
-La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` comme ceci :
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par import la bibliothèque `streamlit` as `st` comme ceci :
 ```python
-importer streamlit en tant que st
+import streamlit as st
 ```
 
 Nous commencerons par définir d'abord la mise en page à afficher en mode "large", qui permet au contenu de la page de s'étendre à la largeur du navigateur.

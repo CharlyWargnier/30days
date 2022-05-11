@@ -21,9 +21,9 @@ Déroulement de l'application :
 ##Code
 Voici comment utiliser [`st.line_chart`](https://docs.streamlit.io/library/api-reference/charts/st.line_chart) :
 ```python
-importer streamlit en tant que st
-importer des pandas en tant que pd
-importer numpy en tant que np
+import streamlit as st
+import pandas as pd
+import numpy as np
 
 st.header('Graphique linéaire')
 
@@ -36,11 +36,11 @@ st.line_chart(chart_data)
 ```
 
 ## Explication ligne par ligne
-La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` ainsi que d'autres bibliothèques comme celle-ci :
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par import la bibliothèque `streamlit` as `st` ainsi que d'autres bibliothèques comme celle-ci :
 ```python
-importer streamlit en tant que st
-importer des pandas en tant que pd
-importer numpy en tant que np
+import streamlit as st
+import pandas as pd
+import numpy as np
 ```
 
 Ensuite, nous créons un texte d'en-tête pour l'application :

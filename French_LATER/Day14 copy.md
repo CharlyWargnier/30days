@@ -17,7 +17,7 @@ Dans ce tutoriel, commençons à utiliser le composant `streamlit_pandas_profili
 #### Installer le composant
 
 ```bash
-pip installer streamlit_pandas_profiling
+pip install streamlit_pandas_profiling
 ```
 
 ## Application de démonstration
@@ -27,10 +27,10 @@ pip installer streamlit_pandas_profiling
 ##Code
 Voici comment créer une application Streamlit à l'aide d'un composant :
 ```python
-importer streamlit en tant que st
-importer des pandas en tant que pd
-importer pandas_profiling
-depuis streamlit_pandas_profiling importer st_profile_report
+import streamlit as st
+import pandas as pd
+import pandas_profiling
+depuis streamlit_pandas_profiling import st_profile_report
 
 st.header('`streamlit_pandas_profiling`')
 
@@ -41,12 +41,12 @@ st_profile_report(pr)
 ```
 
 ## Explication ligne par ligne
-La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` ainsi que d'autres bibliothèques utilisées dans l'application comme ceci :
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par import la bibliothèque `streamlit` as `st` ainsi que d'autres bibliothèques utilisées dans l'application comme ceci :
 ```python
-importer streamlit en tant que st
-importer des pandas en tant que pd
-importer pandas_profiling
-depuis streamlit_pandas_profiling importer st_profile_report
+import streamlit as st
+import pandas as pd
+import pandas_profiling
+depuis streamlit_pandas_profiling import st_profile_report
 ```
 
 Ceci est suivi par la création d'un texte d'en-tête pour l'application :

@@ -11,7 +11,7 @@ Techniquement, il démontre également l'utilisation des API à partir d'une app
 ##Code
 Voici comment implémenter l'application Bored-API :
 ```python
-importer streamlit en tant que st
+import streamlit as st
 demandes d'importation
 
 st.title('🏀 Application API ennuyée')
@@ -44,9 +44,9 @@ avec col3 :
 ```
 
 ## Explication ligne par ligne
-La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` et la bibliothèque `requests` comme suit :
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par import la bibliothèque `streamlit` as `st` et la bibliothèque `requests` comme suit :
 ```python
-importer streamlit en tant que st
+import streamlit as st
 demandes d'importation
 ```
 

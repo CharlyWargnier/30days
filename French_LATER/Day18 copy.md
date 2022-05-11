@@ -11,8 +11,8 @@ Par défaut, les fichiers téléchargés sont limités à 200 Mo. Vous pouvez le
 ##Code
 Voici comment utiliser `st.file_uploader` :
 ```python
-importer streamlit en tant que st
-importer des pandas en tant que pd
+import streamlit as st
+import pandas as pd
 
 st.title('st.file_uploader')
 
@@ -22,7 +22,7 @@ upload_file = st.file_uploader("Choisir un fichier")
 si uploaded_file n'est pas None :
   df = pd.read_csv(téléchargé_fichier)
   st.subheader('DataFrame')
-  st.écrire (df)
+  st.write(df)
   st.subheader('Statistiques descriptives')
   st.write(df.describe())
 autre:
@@ -30,10 +30,10 @@ autre:
 ```
 
 ## Explication ligne par lignea
-La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` et d'autres bibliothèques prérequises comme suit :
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par import la bibliothèque `streamlit` as `st` et d'autres bibliothèques prérequises comme suit :
 ```python
-importer streamlit en tant que st
-importer des pandas en tant que pd
+import streamlit as st
+import pandas as pd
 ```
 
 Ceci est suivi par la création d'un texte de titre pour l'application :
@@ -52,7 +52,7 @@ Enfin, nous définissons des instructions conditionnelles pour afficher initiale
 si uploaded_file n'est pas None :
   df = pd.read_csv(téléchargé_fichier)
   st.subheader('DataFrame')
-  st.écrire (df)
+  st.write(df)
   st.subheader('Statistiques descriptives')
   st.write(df.describe())
 autre:

@@ -9,7 +9,7 @@
 ##Code
 Voici comment utiliser `st.multiselect` :
 ```python
-importer streamlit en tant que st
+import streamlit as st
 
 st.header('st.multiselect')
 
@@ -22,9 +22,9 @@ st.write('Vous avez sélectionné :', options)
 ```
 
 ## Explication ligne par ligne
-La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` comme ceci :
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par import la bibliothèque `streamlit` as `st` comme ceci :
 ```python
-importer streamlit en tant que st
+import streamlit as st
 ```
 
 Ceci est suivi par la création d'un texte d'en-tête pour l'application :

@@ -37,14 +37,14 @@ Vous pouvez y utiliser les données générées à partir de la démo de Nivo Bu
 ```python
 # Tout d'abord, nous aurons besoin des importations suivantes pour notre application.
 
-importer json
-importer streamlit en tant que st
+import json
+import streamlit as st
 à partir du chemin d'importation pathlib
 
 # Comme pour Streamlit Elements, nous aurons besoin de tous ces objets.
 # Tous les objets disponibles et leur utilisation y sont répertoriés : https://github.com/okld/streamlit-elements#getting-started
 
-à partir de streamlit_elements importer des éléments, tableau de bord, mui, éditeur, média, paresseux, synchroniser, nivo
+à partir de streamlit_elements import des éléments, tableau de bord, mui, éditeur, média, paresseux, synchroniser, nivo
 
 # Modifiez la mise en page pour que le tableau de bord occupe toute la page.
 

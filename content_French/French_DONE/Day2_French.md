@@ -11,7 +11,7 @@ Créez un fichier appelé `streamlit_app.py`
 Dans le fichier nouvellement créé, entrez les lignes de code suivantes :
 
 ```
-importer streamlit en tant que st
+import streamlit as st
 
 st.write('Bonjour le monde !')
 ```
@@ -23,7 +23,7 @@ Enregistrez le fichier.
 Au terminal, entrez ce qui suit :
 
 ```
-streamlit exécuter streamlit_app.py
+streamlit run streamlit_app.py
 ```
 
 Une fenêtre de navigateur devrait apparaître et afficher l'application Streamlit nouvellement créée.

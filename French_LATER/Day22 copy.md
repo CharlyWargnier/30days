@@ -4,7 +4,7 @@
 
 En règle générale, chaque fois qu'un utilisateur interagit avec un widget, l'application Streamlit est réexécutée.
 
-Un formulaire est un conteneur qui regroupe visuellement d'autres éléments et widgets et contient un bouton Soumettre. Ici, un utilisateur peut interagir avec un ou plusieurs widgets autant de fois qu'il le souhaite sans provoquer de réexécution. Enfin, lorsque le bouton Soumettre du formulaire est enfoncé, toutes les valeurs de widget à l'intérieur du formulaire seront envoyées à Streamlit en un seul lot.
+Un formulaire est un conteneur qui regroupe visuellement d'autres éléments et widgets et contient un bouton Soumettre. Ici, un utilisateur peut interagir avec un ou plusieurs widgets autant de fois qu'il le souhaite sans provoquer de réexécution. Enfin, lorsque le bouton Soumettre du formulaire est pressé, toutes les valeurs de widget à l'intérieur du formulaire seront envoyées à Streamlit en un seul lot.
 
 Pour ajouter des éléments à un objet de formulaire, vous pouvez utiliser la notation `with` (préférée) ou vous pouvez l'utiliser comme notation d'objet en appelant simplement des méthodes directement sur le formulaire (en l'affectant d'abord à une variable et en appliquant ensuite les méthodes Streamlit sur ce). Voir dans l'exemple d'application.
 
@@ -22,7 +22,7 @@ Pour plus d'informations sur les formulaires, consultez notre [article de blog](
 ##Code
 Voici comment utiliser `st.form` :
 ```python
-importer streamlit en tant que st
+import streamlit as st
 
 st.title('st.form')
 
@@ -69,9 +69,9 @@ st.write('Valeur sélectionnée : ', valeur_sélectionnée)
 ```
 
 ## Explication ligne par ligne
-La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` comme ceci :
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par import la bibliothèque `streamlit` as `st` comme ceci :
 ```python
-importer streamlit en tant que st
+import streamlit as st
 ```
 
 Ceci est suivi par la création d'un texte de titre pour l'application :

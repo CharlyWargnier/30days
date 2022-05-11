@@ -15,7 +15,7 @@
 ##Code
 Voici comment utiliser `st.experimental_get_query_params` :
 ```python
-importer streamlit en tant que st
+import streamlit as st
 
 st.title('st.experimental_get_query_params')
 
@@ -48,9 +48,9 @@ st.write(f'Bonjour **{prénom} {nom}**, comment allez-vous ?')
 ```
 
 ## Explication ligne par ligne
-La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` comme ceci :
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par import la bibliothèque `streamlit` as `st` comme ceci :
 ```python
-importer streamlit en tant que st
+import streamlit as st
 ```
 
 Ensuite, nous donnerons un titre à l'application :

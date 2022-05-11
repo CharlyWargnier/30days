@@ -6,8 +6,8 @@ La bibliothèque est développée par notre personnel interne [Snehan Kekre](htt
 
 Tout d'abord, installez Streamlit (bien sûr !) puis pip installez la bibliothèque `streamlit-shap` :
 ```bash
-pip installer streamlit
-pip installer streamlit-shap
+pip install streamlit
+pip install streamlit-shap
 ```
 
 Il existe également d'autres bibliothèques prérequises à installer (par exemple, `matplotlib`, `pandas`, `scikit-learn` et `xgboost`) si vous ne l'avez pas encore fait.
@@ -20,13 +20,13 @@ Il existe également d'autres bibliothèques prérequises à installer (par exem
 ##Code
 Voici comment utiliser `streamlit-shap` :
 ```python
-importer streamlit en tant que st
-depuis streamlit_shap importer st_shap
+import streamlit as st
+depuis streamlit_shap import st_shap
 forme d'importation
-depuis sklearn.model_selection importer train_test_split
-importer xgboost
-importer numpy en tant que np
-importer des pandas en tant que pd
+depuis sklearn.model_selection import train_test_split
+import xgboost
+import numpy as np
+import pandas as pd
 
 st.set_page_config(layout="wide")
 
@@ -93,15 +93,15 @@ avec st.expander('Force plot'):
 ```
 
 ## Explication ligne par ligne
-La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` comme ceci :
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par import la bibliothèque `streamlit` as `st` comme ceci :
 ```python
-importer streamlit en tant que st
-depuis streamlit_shap importer st_shap
+import streamlit as st
+depuis streamlit_shap import st_shap
 forme d'importation
-depuis sklearn.model_selection importer train_test_split
-importer xgboost
-importer numpy en tant que np
-importer des pandas en tant que pd
+depuis sklearn.model_selection import train_test_split
+import xgboost
+import numpy as np
+import pandas as pd
 ```
 
 Ensuite, nous allons définir la mise en page sur une largeur telle que le contenu de l'application Streamlit puisse s'étendre sur toute la largeur de la page.

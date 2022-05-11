@@ -2,6 +2,6 @@
 
 ## Regardez la vidéo de Ken
 
-Suivons et regardons comment [Ken Jee](https://www.youtube.com/c/KenJee1) crée une application Streamlit dans cette vidéo :
+Regardons comment [Ken Jee](https://www.youtube.com/c/KenJee1) a crée une application Streamlit dans cette vidéo :
 
 [![Data Science Portfolio Project from Scratch](https://img.youtube.com/vi/Yk-unX4KnV4/0.jpg)](<https://www.youtube.com/watch?v=Yk- aX4KnV4>)]

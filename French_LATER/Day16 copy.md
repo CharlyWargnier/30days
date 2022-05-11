@@ -13,7 +13,7 @@ Une application simple qui montre le résultat de notre personnalisation de thè
 ##Code
 Voici le code du fichier [`streamlit_app.py`](https://github.com/dataprofessor/streamlit-custom-theme/blob/master/streamlit_app.py) :
 ```python
-importer streamlit en tant que st
+import streamlit as st
 
 st.title('Personnalisation du thème des applications Streamlit')
 
@@ -43,9 +43,9 @@ font="monospace"
 ```
 
 ## Explication ligne par ligne
-La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` comme ceci :
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par import la bibliothèque `streamlit` as `st` comme ceci :
 ```python
-importer streamlit en tant que st
+import streamlit as st
 ```
 
 Ceci est suivi par la création d'un texte de titre pour l'application :

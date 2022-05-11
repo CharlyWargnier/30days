@@ -28,9 +28,9 @@ Vous pouvez simplement ajouter le décorateur `st.cache` sur la ligne précéden
 ##Code
 Voici comment utiliser `st.cache` :
 ```python
-importer streamlit en tant que st
-importer numpy en tant que np
-importer des pandas en tant que pd
+import streamlit as st
+import numpy as np
+import pandas as pd
 à partir du moment de l'importation
 
 st.title('st.cache')
@@ -69,11 +69,11 @@ st.info(b1-b0)
 ```
 
 ## Explication ligne par ligne
-La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` ainsi que d'autres bibliothèques utilisées dans l'application comme ceci :
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par import la bibliothèque `streamlit` as `st` ainsi que d'autres bibliothèques utilisées dans l'application comme ceci :
 ```python
-importer streamlit en tant que st
-importer numpy en tant que np
-importer des pandas en tant que pd
+import streamlit as st
+import numpy as np
+import pandas as pd
 à partir du moment de l'importation
 ```
 

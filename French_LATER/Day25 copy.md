@@ -15,7 +15,7 @@ Dans ce didacticiel, nous allons illustrer l'utilisation de l'état de session e
 ##Code
 Voici comment utiliser `st.session_state` :
 ```python
-importer streamlit en tant que st
+import streamlit as st
 
 st.title('st.session_state')
 
@@ -36,9 +36,9 @@ st.write("objet st.session_state : ", st.session_state)
 ```
 
 ## Explication ligne par ligne
-La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` comme ceci :
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par import la bibliothèque `streamlit` as `st` comme ceci :
 ```python
-importer streamlit en tant que st
+import streamlit as st
 ```
 
 Tout d'abord, nous allons commencer par créer le titre de l'application :

@@ -13,7 +13,7 @@ Maintenant que vous avez installé conda, créons un environnement conda pour g�
 
 Pour créer un nouvel environnement avec Python 3.9, saisissez ce qui suit :
 ```bash
-conda créer -n stenv python=3.9
+conda create -n stenv python=3.9
 ```
 
 où `create -n stenv` créera un environnement conda nommé `stenv` et `python=3.9` configurera l'environnement conda avec Python version 3.9.
@@ -23,14 +23,14 @@ où `create -n stenv` créera un environnement conda nommé `stenv` et `python=3
 Pour utiliser un environnement conda que nous venons de créer et qui s'appelle `stenv`, entrez ce qui suit dans la ligne de commande :
 
 ```bash
-conda activer stenv
+conda activate stenv
 ```
 
 ## **Installez la bibliothèque Streamlit**
 
 Il est maintenant temps d'installer la bibliothèque `streamlit` :
 ```bash
-pip installer streamlit
+pip install streamlit
 ```
 
 ## **Lancement de l'application de démonstration Streamlit**

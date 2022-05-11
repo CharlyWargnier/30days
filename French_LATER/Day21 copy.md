@@ -9,7 +9,7 @@
 ##Code
 Voici comment utiliser `st.progress` :
 ```python
-importer streamlit en tant que st
+import streamlit as st
 temps d'importation
 
 st.title('st.progress')
@@ -27,9 +27,9 @@ st.ballons()
 ```
 
 ## Explication ligne par ligne
-La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` avec la bibliothèque `time` comme ceci :
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par import la bibliothèque `streamlit` as `st` avec la bibliothèque `time` comme ceci :
 ```python
-importer streamlit en tant que st
+import streamlit as st
 temps d'importation
 ```
 

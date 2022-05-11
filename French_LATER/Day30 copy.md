@@ -6,7 +6,7 @@ Dans ce didacticiel, nous allons mettre à profit nos nouvelles connaissances ac
 
 ## Problème du monde réel
 
-En tant que créateur de contenu, l'accès aux images miniatures des vidéos YouTube est une ressource utile pour la promotion sociale et la création de contenu.
+as créateur de contenu, l'accès aux images miniatures des vidéos YouTube est une ressource utile pour la promotion sociale et la création de contenu.
 
 Voyons comment nous allons résoudre ce problème et créer une application Streamlit.
 
@@ -31,7 +31,7 @@ Pour commencer à utiliser l'application Streamlit, copiez et collez une URL You
 ##Code
 Voici comment créer l'application Streamlit `yt-img-app` :
 ```python
-importer streamlit en tant que st
+import streamlit as st
 
 st.title('🖼️ yt-img-app')
 st.header('Application d'extraction d'images miniatures YouTube')
@@ -66,9 +66,9 @@ autre:
 ```
 
 ## Explication ligne par ligne
-La toute première chose à faire lors de la création d'une application Streamlit est de commencer par importer la bibliothèque `streamlit` en tant que `st` comme ceci :
+La toute première chose à faire lors de la création d'une application Streamlit est de commencer par import la bibliothèque `streamlit` as `st` comme ceci :
 ```python
-importer streamlit en tant que st
+import streamlit as st
 ```
 
 Ensuite, nous affichons le titre de l'application et l'en-tête qui l'accompagne :
